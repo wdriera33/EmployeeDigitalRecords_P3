@@ -39,7 +39,7 @@ def load_contract():
 # Load the contract
 contract = load_contract()
 
-st.write(contract.functions.totalSupply().call())
+# st.write(contract.functions.totalSupply().call())
 ################################################################################
 # Helper functions to pin files and json to Pinata
 ################################################################################
@@ -103,7 +103,7 @@ if st.button("Register Driver"):
         original_cld_year, 
         employee_violations, 
         employee_accidents, 
-        int(initial_employee_value), 
+        initial_employee_value, 
         attachment,
     
     ).transact({'from': employee_wallet, 'gas': 1000000})

@@ -33,11 +33,30 @@
 		"type": "function"
 	},
 	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "tokenId",
+				"type": "uint256"
+			}
+		],
+		"name": "getApproved",
+		"outputs": [
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
 		"constant": false,
 		"inputs": [
 			{
 				"name": "owner",
-				"type": "address"
+				"type": "string"
 			},
 			{
 				"name": "name",
@@ -61,14 +80,14 @@
 			},
 			{
 				"name": "initialEmployeeScore",
-				"type": "uint256"
+				"type": "string"
 			},
 			{
 				"name": "attachment",
 				"type": "string"
 			}
 		],
-		"name": "onbordingEmployee",
+		"name": "onboardingEmployee",
 		"outputs": [
 			{
 				"name": "",
@@ -77,25 +96,6 @@
 		],
 		"payable": false,
 		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"constant": true,
-		"inputs": [
-			{
-				"name": "tokenId",
-				"type": "uint256"
-			}
-		],
-		"name": "getApproved",
-		"outputs": [
-			{
-				"name": "",
-				"type": "address"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
 		"type": "function"
 	},
 	{
@@ -245,6 +245,10 @@
 		],
 		"name": "employeeData",
 		"outputs": [
+			{
+				"name": "owner",
+				"type": "address"
+			},
 			{
 				"name": "name",
 				"type": "string"
