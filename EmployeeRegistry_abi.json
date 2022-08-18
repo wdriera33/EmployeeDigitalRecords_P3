@@ -56,7 +56,7 @@
 		"inputs": [
 			{
 				"name": "owner",
-				"type": "string"
+				"type": "address"
 			},
 			{
 				"name": "name",
@@ -80,7 +80,7 @@
 			},
 			{
 				"name": "initialEmployeeScore",
-				"type": "string"
+				"type": "uint256"
 			},
 			{
 				"name": "attachment",
