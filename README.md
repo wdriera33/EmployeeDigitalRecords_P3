@@ -1,6 +1,6 @@
 # Truck Employee
 
-![alt text](https://raw.githubusercontent.com/wdriera33/TruckStaffing_Project3/main/Insturance%20truck.png "Logo Title Text 1")
+![alt text](https://raw.githubusercontent.com/wdriera33/TruckStaffing_Project3/main/Insurance_truck.png "Logo Title Text 1")
 
 
 # Software Services
