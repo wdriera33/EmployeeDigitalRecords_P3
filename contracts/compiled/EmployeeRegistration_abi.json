@@ -55,53 +55,6 @@
 		"constant": false,
 		"inputs": [
 			{
-				"name": "owner",
-				"type": "address"
-			},
-			{
-				"name": "name",
-				"type": "string"
-			},
-			{
-				"name": "birthYear",
-				"type": "string"
-			},
-			{
-				"name": "originalCdlYear",
-				"type": "string"
-			},
-			{
-				"name": "violations",
-				"type": "string"
-			},
-			{
-				"name": "accidents",
-				"type": "string"
-			},
-			{
-				"name": "initialEmployeeScore",
-				"type": "uint256"
-			},
-			{
-				"name": "attachment",
-				"type": "string"
-			}
-		],
-		"name": "onboardingEmployee",
-		"outputs": [
-			{
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"payable": false,
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"constant": false,
-		"inputs": [
-			{
 				"name": "to",
 				"type": "address"
 			},
@@ -237,53 +190,6 @@
 	},
 	{
 		"constant": true,
-		"inputs": [
-			{
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"name": "employeeData",
-		"outputs": [
-			{
-				"name": "owner",
-				"type": "address"
-			},
-			{
-				"name": "name",
-				"type": "string"
-			},
-			{
-				"name": "birthYear",
-				"type": "string"
-			},
-			{
-				"name": "originalCdlYear",
-				"type": "string"
-			},
-			{
-				"name": "violations",
-				"type": "string"
-			},
-			{
-				"name": "accidents",
-				"type": "string"
-			},
-			{
-				"name": "employeeScore",
-				"type": "uint256"
-			},
-			{
-				"name": "attachment",
-				"type": "string"
-			}
-		],
-		"payable": false,
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"constant": true,
 		"inputs": [],
 		"name": "baseURI",
 		"outputs": [
@@ -332,6 +238,37 @@
 		],
 		"payable": false,
 		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "tokenId",
+				"type": "uint256"
+			},
+			{
+				"name": "newScoreValue",
+				"type": "uint256"
+			},
+			{
+				"name": "reportURI",
+				"type": "string"
+			},
+			{
+				"name": "tokenJSON",
+				"type": "string"
+			}
+		],
+		"name": "newScore",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
 		"type": "function"
 	},
 	{
@@ -415,6 +352,49 @@
 		"constant": true,
 		"inputs": [
 			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "employeeRecords",
+		"outputs": [
+			{
+				"name": "name",
+				"type": "string"
+			},
+			{
+				"name": "birthyear",
+				"type": "string"
+			},
+			{
+				"name": "originalCdlYear",
+				"type": "string"
+			},
+			{
+				"name": "employeeViolations",
+				"type": "string"
+			},
+			{
+				"name": "employeeAccidents",
+				"type": "string"
+			},
+			{
+				"name": "scoreValue",
+				"type": "uint256"
+			},
+			{
+				"name": "ertJson",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
 				"name": "owner",
 				"type": "address"
 			},
@@ -438,31 +418,43 @@
 		"constant": false,
 		"inputs": [
 			{
-				"name": "tokenId",
+				"name": "owner",
+				"type": "address"
+			},
+			{
+				"name": "name",
+				"type": "string"
+			},
+			{
+				"name": "birthyear",
+				"type": "string"
+			},
+			{
+				"name": "originalCdlYear",
+				"type": "string"
+			},
+			{
+				"name": "employeeViolations",
+				"type": "string"
+			},
+			{
+				"name": "employeeAccidents",
+				"type": "string"
+			},
+			{
+				"name": "initialScoreValue",
 				"type": "uint256"
 			},
 			{
-				"name": "newEmployeeScore",
-				"type": "uint256"
-			},
-			{
-				"name": "newAccidents",
+				"name": "tokenURI",
 				"type": "string"
 			},
 			{
-				"name": "newViolations",
-				"type": "string"
-			},
-			{
-				"name": "reportURI",
-				"type": "string"
-			},
-			{
-				"name": "attachment",
+				"name": "tokenJSON",
 				"type": "string"
 			}
 		],
-		"name": "updateRecord",
+		"name": "registerEmployee",
 		"outputs": [
 			{
 				"name": "",
@@ -489,18 +481,8 @@
 			},
 			{
 				"indexed": false,
-				"name": "employeeScore",
+				"name": "scoreValue",
 				"type": "uint256"
-			},
-			{
-				"indexed": false,
-				"name": "violations",
-				"type": "string"
-			},
-			{
-				"indexed": false,
-				"name": "accidents",
-				"type": "string"
 			},
 			{
 				"indexed": false,
@@ -509,7 +491,7 @@
 			},
 			{
 				"indexed": false,
-				"name": "attachment",
+				"name": "ertJson",
 				"type": "string"
 			}
 		],
