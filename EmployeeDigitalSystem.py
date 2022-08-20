@@ -65,10 +65,6 @@ st.image("https://gateway.pinata.cloud/ipfs/QmeajV7L4NSDv2NiDiabxMQwiXRDfagbbsa8
 #st.title("Employee DigitalWallet System")
 #st.write("Choose a digitalwallet for driver")
 
-#accounts = w3.eth.accounts
-#address = st.selectbox("Select Account", options=accounts)
-#st.markdown("---")
-
 
 # Register New Employee
 st.title("Employee DigitalWallet System")
@@ -152,36 +148,6 @@ st.markdown("---")
 
 
 # Get Employee History
-
-#st.markdown("## Employee Digital Record History")
-#ERT_token_id = st.number_input("Employee ID", value=0, step=1)
-#if st.button("Get Employee Records"):
-    #employee_filter = contract.events.employee.createFilter(
-        #fromBlock=0, argument_filters={"tokenId": ERT_token_id}
-    #)
-    #reports = employee_filter.get_all_entries()
-    #if reports:
-        #for report in reports:
-            #report_dictionary = dict(report)
-            #st.markdown("### Employee Records Event Log")
-            #st.write(report_dictionary)
-            #st.markdown("### Pinata IPFS Report URI")
-            #report_uri = report_dictionary["args"]["reportURI"]
-            #report_ipfs_hash = report_uri[7:]
-            #image_uri = report_dictionary["args"]["artJson"]
-            #st.markdown(
-            #    f"The report is located at the following URI: "
-            #    f"{report_uri}"
-            # )
-            #st.write("You can also view the report URI with the following ipfs gateway link")
-            #st.markdown(f"[IPFS Gateway Link](https://ipfs.io/ipfs/{report_ipfs_hash})")
-            #st.markdown("### Employee Event Details")
-            #st.write(report_dictionary["args"])
-            #st.image(f'https://ipfs.io/ipfs/{image_uri}')
-    #else:
-        #st.write("This employee has no new history")
-
-        ########################################################################
 st.markdown("## Employee Digital Records")
 ert_token_id = st.number_input("Employee ERT Token #", value=0, step=1)
 if st.button("Get Employee Records"):
